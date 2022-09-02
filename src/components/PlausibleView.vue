@@ -4,7 +4,7 @@
       <k-header>Analytik</k-header>
       <iframe
         v-if="sharedLink"
-        :src="sharedLink"
+        :src="`${sharedLink}&embed=true&theme=light&background=transparent`"
         plausible-embed
         scrolling="no"
         frameborder="0"
