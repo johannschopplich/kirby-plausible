@@ -1,17 +1,1 @@
-panel.plugin("floriankarsten/plausible", {
-	components: {
-		'k-plausible-view': {
-			template: `
-				<k-inside>
-					<k-view class="k-plausible-view">
-						<iframe v-if="sharedLink" plausible-embed v-bind:src="sharedLink + '&embed=true&theme=light&background=%23efefef'" scrolling="no" frameborder="0" loading="lazy" style="width: 1px; min-width: 100%; height: 1600px;"></iframe>
-						<div style="margin-top: 30px; text-align: center;" v-else>
-							<code>You need to set floriankarsten.plausible.sharedLink in config.php</code>
-						</div>
-					</k-view>
-				</k-inside>
-			`,
-			props: ["sharedLink"],
-		},
-	},
-});
+(function(){"use strict";const g="";function f(s,e,i,k,a,t,_,m){var n=typeof s=="function"?s.options:s;e&&(n.render=e,n.staticRenderFns=i,n._compiled=!0),k&&(n.functional=!0),t&&(n._scopeId="data-v-"+t);var o;if(_?(o=function(r){r=r||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext,!r&&typeof __VUE_SSR_CONTEXT__<"u"&&(r=__VUE_SSR_CONTEXT__),a&&a.call(this,r),r&&r._registeredComponents&&r._registeredComponents.add(_)},n._ssrRegister=o):a&&(o=m?function(){a.call(this,(n.functional?this.parent:this).$root.$options.shadowRoot)}:a),o)if(n.functional){n._injectStyles=o;var b=n.render;n.render=function(C,d){return o.call(d),b(C,d)}}else{var l=n.beforeCreate;n.beforeCreate=l?[].concat(l,o):[o]}return{exports:s,options:n}}const u={props:{sharedLink:{type:String,required:!0}}};var v=function(){var e=this,i=e._self._c;return i("k-inside",[i("k-view",{staticClass:"k-plausible-view"},[i("k-header",[e._v("Analytik")]),e.sharedLink?i("iframe",{attrs:{src:e.sharedLink,"plausible-embed":"",scrolling:"no",frameborder:"0",loading:"lazy"}}):i("k-box",{attrs:{theme:"negative"}},[e._v(" You need to set the "),i("code",[e._v("PLAUSIBLE_SHARED_LINK")]),e._v(" environment variable in your "),i("code",[e._v(".env")]),e._v(" file or "),i("code",[e._v("johannschopplich.plausible.sharedLink")]),e._v(" in your "),i("code",[e._v("config.php")]),e._v(". ")])],1)],1)},p=[],c=f(u,v,p,!1,null,"e60fdd45",null,null);const h=c.exports;window.panel.plugin("katapult/panel-extensions",{components:{"k-plausible-view":h}})})();

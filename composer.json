@@ -1,22 +1,39 @@
 {
-    "name": "floriankarsten/kirby-plausible",
-    "description": "",
-    "type": "kirby-plugin",
-	"version": "0.1.4",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Florian Karsten",
-            "email": "code@floriankarsten.com"
-        }
-    ],
-    "require": {
-        "getkirby/composer-installer": "^1.1",
-		"getkirby/cms": "^3.6.0-alpha.1"
-    },
-    "autoload": {
-    },
-    "config": {
-        "optimize-autoloader": true
+  "name": "floriankarsten/kirby-plausible",
+  "description": "Plausible integration for Kirby CMS",
+  "type": "kirby-plugin",
+  "version": "0.1.0",
+  "keywords": [
+    "kirby",
+    "plausible",
+    "analytics"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/johannschopplich/kirby-plausible#readme",
+  "authors": [
+    {
+      "name": "Johann Schopplich",
+      "email": "pkg@johannschopplich.com",
+      "homepage": "https://johannschopplich.com"
     }
+  ],
+  "require": {
+    "php": ">=8.0.0",
+    "getkirby/composer-installer": "^1.2"
+  },
+  "require-dev": {
+    "getkirby/cms": "^3.6"
+  },
+  "scripts": {
+    "dist": "composer install --no-dev --optimize-autoloader"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "getkirby/composer-installer": true
+    }
+  },
+  "extra": {
+    "kirby-cms-path": false
+  }
 }
