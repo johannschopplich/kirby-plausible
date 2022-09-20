@@ -6,7 +6,7 @@ Integrate a [Plausible](https://plausible.io) analytics dashboard directly into 
 
 ## Key Features
 
-- ⚡️ `.env` support with [kirby-extended](https://github.com/johannschopplich/kirby-extended)
+- ⚡️ `.env` support with [kirby-helpers](https://github.com/johannschopplich/kirby-helpers)
 
 ## Installation
 
