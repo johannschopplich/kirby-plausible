@@ -35,6 +35,12 @@ export default {
 iframe {
   width: 1px;
   min-width: 100%;
-  height: 1600px;
+  height: 1700px;
+}
+
+@media (max-width: 850px) {
+  iframe {
+    height: 2300px;
+  }
 }
 </style>
