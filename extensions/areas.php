@@ -3,7 +3,7 @@
 return [
     'plausible' => fn ($kirby) => [
         'label' => 'Analytics',
-        'icon' => 'road-sign',
+        'icon' => 'chart',
         'disabled' => false,
         'menu' => true,
         'link' => 'plausible',
