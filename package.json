@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "0.3.1",
+  "version": "0.3.2",
   "scripts": {
     "dev": "kirbyup src/index.js --watch",
     "serve": "kirbyup serve src/index.js",
