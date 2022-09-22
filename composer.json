@@ -4,7 +4,9 @@
   "type": "kirby-plugin",
   "version": "0.3.1",
   "keywords": [
+    "getkirby",
     "kirby",
+    "kirby-cms",
     "plausible",
     "analytics"
   ],
@@ -22,7 +24,7 @@
     "getkirby/composer-installer": "^1.2"
   },
   "require-dev": {
-    "getkirby/cms": "^3.6"
+    "getkirby/cms": "^3.7"
   },
   "scripts": {
     "dist": "composer install --no-dev --optimize-autoloader"
