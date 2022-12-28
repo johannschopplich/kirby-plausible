@@ -1,8 +1,8 @@
 <?php
 
-\Kirby\Cms\App::plugin('johannschopplich/plausible', [
-    'areas' => require __DIR__ . '/extensions/areas.php',
+\Kirby\Cms\App::plugin('johannschopplich/kirby-plausible', [
+    'areas' => require __DIR__ . '/src/extensions/areas.php',
     'snippets' => [
-        'plausible' => __DIR__ . '/snippets/plausible.php'
+        'plausible' => __DIR__ . '/src/snippets/plausible.php'
     ]
 ]);
