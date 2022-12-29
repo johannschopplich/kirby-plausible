@@ -23,9 +23,11 @@
     "getkirby/composer-installer": "^1.2"
   },
   "require-dev": {
+    "friendsofphp/php-cs-fixer": "@stable",
     "getkirby/cms": "^3.8"
   },
   "scripts": {
+    "fix": "php-cs-fixer fix",
     "dist": "composer install --no-dev --optimize-autoloader"
   },
   "config": {
