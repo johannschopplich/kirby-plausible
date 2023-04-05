@@ -1,7 +1,7 @@
 <template>
   <k-inside>
     <k-view class="k-plausible-view">
-      <k-header>Analytik</k-header>
+      <k-header>Plausible Analytics</k-header>
       <iframe
         v-if="sharedLink"
         :src="`${sharedLink}&embed=true&theme=light&background=transparent`"
