@@ -56,6 +56,6 @@ You can use the included snippet. Add it to the `<head>` tag preferably. The scr
 
 ## License
 
-[MIT](./LICENSE) License © 2022 [Johann Schopplich](https://github.com/johannschopplich)
+[MIT](./LICENSE) License © 2022-present [Johann Schopplich](https://github.com/johannschopplich)
 
 [MIT](./LICENSE) License © 2021 [Florian Karsten](https://github.com/floriankarsten)
