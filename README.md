@@ -1,30 +1,32 @@
+![Kirby Plausible](./.github/kirby-plausible.png)
+
 # Kirby Plausible
 
-> ℹ️ This is a refactored version of [floriankarsten/kirby-plausible](https://github.com/floriankarsten/kirby-plausible).
+> [!INFO]
+> This is a refactored version of [floriankarsten/kirby-plausible](https://github.com/floriankarsten/kirby-plausible).
 
-Integrate a [Plausible](https://plausible.io) analytics dashboard directly into your Kirby Panel.
+This plugin integrates a [Plausible](https://plausible.io) analytics dashboard directly into your Kirby Panel.
 
 ## Key Features
 
-- ⚡️ `.env` support with [kirby-helpers](https://github.com/johannschopplich/kirby-helpers)
+- ⚡️ `.env` support when [kirby-helpers](https://github.com/johannschopplich/kirby-helpers) is installed
+
+## Requirements
+
+> [!NOTE]
+> The current version of this plugin requires Kirby 4 or higher. For Kirby 3 support, please use version 0.3 of Kirby Plausible.
 
 ## Installation
-
-### Download
-
-Download and copy this repository to `/site/plugins/kirby-plausible`.
-
-### Git submodule
-
-```bash
-git submodule add https://github.com/johannschopplich/kirby-plausible.git site/plugins/kirby-plausible
-```
 
 ### Composer
 
 ```bash
 composer require johannschopplich/kirby-plausible
 ```
+
+### Download
+
+Download and copy this repository to `/site/plugins/kirby-plausible`.
 
 ## Usage
 
@@ -34,17 +36,21 @@ composer require johannschopplich/kirby-plausible
 ```php
 // config.php
 return [
-  'johannschopplich.plausible' => [
-    'sharedLink' => '<your-plausible-shared-link>',
-    // Only needed if the frontend URL differs from the index URL of the Kirby instance
-    'domain' => '<your-frontend-domain>'
-  ]
+    'johannschopplich.plausible' => [
+        'sharedLink' => '<your-plausible-shared-link>',
+        // Only needed if the frontend URL differs from the index URL of the Kirby instance
+        'domain' => '<your-frontend-domain>'
+    ]
 ];
 ```
 
 ### Dotenv Support
 
-Set the `PLAUSIBLE_SHARED_LINK` environment variable optionally instead of the `config.php` option.
+You can use the `PLAUSIBLE_SHARED_LINK` environment variable instead of setting the `johannschopplich.plausible.sharedLink` in your `config.php`.
+
+```ini
+PLAUSIBLE_SHARED_LINK=<your-plausible-shared-link>
+```
 
 ### Frontend Snippet
 
@@ -56,6 +62,6 @@ You can use the included snippet. Add it to the `<head>` tag preferably. The scr
 
 ## License
 
-[MIT](./LICENSE) License © 2022-present [Johann Schopplich](https://github.com/johannschopplich)
+[MIT](./LICENSE) License © 2022-PRESENT [Johann Schopplich](https://github.com/johannschopplich)
 
 [MIT](./LICENSE) License © 2021 [Florian Karsten](https://github.com/floriankarsten)
