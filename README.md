@@ -2,7 +2,7 @@
 
 # Kirby Plausible
 
-> [!INFO]
+> [!NOTE]
 > This is a refactored version of [floriankarsten/kirby-plausible](https://github.com/floriankarsten/kirby-plausible).
 
 This plugin integrates a [Plausible](https://plausible.io) analytics dashboard directly into your Kirby Panel.
