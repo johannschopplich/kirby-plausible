@@ -11,7 +11,7 @@ return [
             [
                 'pattern' => 'plausible',
                 'action'  => fn () => [
-                    'component' => 'KPlausibleView',
+                    'component' => 'k-plausible-view',
                     'title' => 'Analytics',
                     'props' => [
                         'sharedLink' => $kirby->option(
