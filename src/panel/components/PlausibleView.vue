@@ -10,8 +10,8 @@ export default {
 </script>
 
 <template>
-  <k-panel-inside class="k-plausible-view">
-    <k-header>Plausible Analytics</k-header>
+  <KPanelInside>
+    <KHeader>Plausible Analytics</KHeader>
 
     <iframe
       v-if="sharedLink"
@@ -21,13 +21,13 @@ export default {
       frameborder="0"
       loading="lazy"
     />
-    <k-box v-else theme="negative">
+    <KBox v-else theme="negative">
       You need to set the <code>PLAUSIBLE_SHARED_LINK</code> environment
       variable in your <code>.env</code> file or
       <code>johannschopplich.plausible.sharedLink</code> in your
       <code>config.php</code>.
-    </k-box>
-  </k-panel-inside>
+    </KBox>
+  </KPanelInside>
 </template>
 
 <style scoped>

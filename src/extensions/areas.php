@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'plausible' => fn ($kirby) => [
+    'plausible' => fn (\Kirby\Cms\App $kirby) => [
         'label' => 'Analytics',
         'icon' => 'chart',
         'disabled' => false,
@@ -11,7 +11,7 @@ return [
             [
                 'pattern' => 'plausible',
                 'action'  => fn () => [
-                    'component' => 'k-plausible-view',
+                    'component' => 'KPlausibleView',
                     'title' => 'Analytics',
                     'props' => [
                         'sharedLink' => $kirby->option(
