@@ -1,21 +1,22 @@
 {
-  "private": true,
+  "name": "kirby-plausible",
+  "type": "module",
   "version": "0.4.2",
-  "packageManager": "pnpm@8.10.5",
+  "private": true,
+  "packageManager": "pnpm@8.12.1",
   "scripts": {
-    "dev": "kirbyup src/panel/index.js --watch",
-    "serve": "kirbyup serve src/panel/index.js",
+    "dev": "kirbyup serve src/panel/index.js",
     "build": "kirbyup src/panel/index.js",
-    "lint": "eslint src/panel",
-    "lint:fix": "eslint src/panel --fix",
-    "format": "prettier \"src/panel/**/*.{css,js,vue}\" --write",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier \"src/panel/**\" --write",
     "release": "pnpm run build && bumpp --all"
   },
   "devDependencies": {
-    "@byjohann/eslint-config": "^0.3.0",
-    "bumpp": "^9.2.0",
-    "eslint": "^8.53.0",
-    "kirbyup": "^3.0.2",
-    "prettier": "^3.1.0"
+    "@antfu/eslint-config": "^2.4.6",
+    "bumpp": "^9.2.1",
+    "eslint": "^8.56.0",
+    "kirbyup": "^3.1.0",
+    "prettier": "^3.1.1"
   }
 }
