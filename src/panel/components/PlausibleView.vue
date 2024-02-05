@@ -12,7 +12,6 @@ export default {
 <template>
   <k-panel-inside>
     <k-header>Plausible Analytics</k-header>
-
     <iframe
       v-if="sharedLink"
       :src="`${sharedLink}&embed=true&theme=light&background=transparent`"
@@ -21,11 +20,9 @@ export default {
       frameborder="0"
       loading="lazy"
     />
-    <k-box v-else theme="negative">
-      You need to set the <code>PLAUSIBLE_SHARED_LINK</code> environment
-      variable in your <code>.env</code> file or
-      <code>johannschopplich.plausible.sharedLink</code> in your
-      <code>config.php</code>.
+    <k-box v-else theme="empty">
+      Missing <code>johannschopplich.plausible.sharedLink</code> property in
+      your global Kirby configuration.
     </k-box>
   </k-panel-inside>
 </template>
@@ -34,7 +31,7 @@ export default {
 iframe {
   width: 1px;
   min-width: 100%;
-  height: 1700px;
+  height: 2000px;
   /* Counterpart padding inside Plausible frame */
   margin-left: -1.5rem;
   margin-right: -1.5rem;
@@ -42,7 +39,7 @@ iframe {
 
 @media (max-width: 850px) {
   iframe {
-    height: 2300px;
+    height: 3050px;
   }
 }
 </style>

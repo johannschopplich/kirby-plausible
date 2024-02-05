@@ -14,10 +14,7 @@ return [
                     'component' => 'k-plausible-view',
                     'title' => 'Analytics',
                     'props' => [
-                        'sharedLink' => $kirby->option(
-                            'johannschopplich.plausible.sharedLink',
-                            function_exists('env') ? env('PLAUSIBLE_SHARED_LINK', '') : ''
-                        )
+                        'sharedLink' => $kirby->option('johannschopplich.plausible.sharedLink', '')
                     ]
                 ]
             ]

@@ -7,14 +7,12 @@
 
 This plugin integrates a [Plausible](https://plausible.io) analytics dashboard directly into your Kirby Panel.
 
-## Key Features
-
-- ⚡️ `.env` support when [kirby-helpers](https://github.com/johannschopplich/kirby-helpers) is installed
-
 ## Requirements
 
+- Kirby 4 or higher
+
 > [!NOTE]
-> The current version of this plugin requires Kirby 4 or higher. For Kirby 3 support, please use version 0.3 of Kirby Plausible.
+> For Kirby 3 support, please use version 0.3 of Kirby Plausible.
 
 ## Installation
 
@@ -42,14 +40,6 @@ return [
         'domain' => '<your-frontend-domain>'
     ]
 ];
-```
-
-### Dotenv Support
-
-You can use the `PLAUSIBLE_SHARED_LINK` environment variable instead of setting the `johannschopplich.plausible.sharedLink` in your `config.php`.
-
-```ini
-PLAUSIBLE_SHARED_LINK=<your-plausible-shared-link>
 ```
 
 ### Frontend Snippet
