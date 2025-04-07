@@ -1,9 +1,37 @@
 <script>
+const isKirby4 = window.panel.plugins.viewButtons === undefined;
+
+function getSystemTheme() {
+  if (isKirby4) {
+    return "light";
+  }
+
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+}
+
 export default {
   props: {
     sharedLink: {
       type: String,
       required: true,
+    },
+  },
+  data() {
+    return {
+      theme: getSystemTheme(),
+    };
+  },
+  mounted() {
+    this.updateTheme();
+  },
+  methods: {
+    updateTheme() {
+      const panelElement = document.querySelector(".k-panel");
+      if (panelElement) {
+        this.theme = panelElement.dataset.theme || getSystemTheme();
+      }
     },
   },
 };
@@ -14,7 +42,7 @@ export default {
     <k-header>Plausible Analytics</k-header>
     <iframe
       v-if="sharedLink"
-      :src="`${sharedLink}&embed=true&theme=light&background=transparent`"
+      :src="`${sharedLink}&embed=true&theme=${theme}&background=transparent`"
       plausible-embed
       scrolling="no"
       frameborder="0"

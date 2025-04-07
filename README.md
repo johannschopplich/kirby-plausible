@@ -9,10 +9,7 @@ This plugin integrates a [Plausible](https://plausible.io) analytics dashboard d
 
 ## Requirements
 
-- Kirby 4 or higher
-
-> [!NOTE]
-> For Kirby 3 support, please use version 0.3 of Kirby Plausible.
+- Kirby 4 or Kirby 5
 
 ## Installation
 
