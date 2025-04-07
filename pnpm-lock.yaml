@@ -23,6 +23,9 @@ importers:
       prettier:
         specifier: ^3.5.3
         version: 3.5.3
+      zx:
+        specifier: ^8.5.0
+        version: 8.5.0
 
 packages:
 
@@ -2223,6 +2226,11 @@ packages:
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
+
+  zx@8.5.0:
+    resolution: {integrity: sha512-XS5/oKOQxKNfG2sVO6TQQjZF5RqWGE5QGSUOCZZVTnvYr3RDBTdbX3IFmV9CrnycCAQWcY0hAD3DDUa4RJE4+w==}
+    engines: {node: '>= 12.17.0'}
+    hasBin: true
 
 snapshots:
 
@@ -4638,3 +4646,5 @@ snapshots:
   yocto-queue@0.1.0: {}
 
   zwitch@2.0.4: {}
+
+  zx@8.5.0: {}
