@@ -1,15 +1,5 @@
 <script>
-const isKirby4 = window.panel.plugins.viewButtons === undefined;
-
-function getSystemTheme() {
-  if (isKirby4) {
-    return "light";
-  }
-
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
-}
+const isKirby5 = window.panel.plugins.viewButtons !== undefined;
 
 export default {
   props: {
@@ -18,20 +8,9 @@ export default {
       required: true,
     },
   },
-  data() {
-    return {
-      theme: getSystemTheme(),
-    };
-  },
-  mounted() {
-    this.updateTheme();
-  },
-  methods: {
-    updateTheme() {
-      const panelElement = document.querySelector(".k-panel");
-      if (panelElement) {
-        this.theme = panelElement.dataset.theme || getSystemTheme();
-      }
+  computed: {
+    theme() {
+      return isKirby5 ? window.panel.theme.current : "light";
     },
   },
 };
