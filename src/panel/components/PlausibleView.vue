@@ -21,7 +21,7 @@ export default {
     <k-header>Plausible Analytics</k-header>
     <iframe
       v-if="sharedLink"
-      :src="`${sharedLink}&embed=true&theme=${theme}&background=${theme === 'light' ? 'transparent' : '#1f1f1f'}`"
+      :src="`${sharedLink}&embed=true&theme=${theme}&background=${theme === 'light' ? 'transparent' : '%231f1f1f'}`"
       plausible-embed
       scrolling="no"
       frameborder="0"
