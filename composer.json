@@ -2,7 +2,7 @@
   "name": "johannschopplich/kirby-plausible",
   "description": "Plausible integration for Kirby CMS",
   "type": "kirby-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [
     "getkirby",
     "kirby",
