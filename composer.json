@@ -4,9 +4,9 @@
   "type": "kirby-plugin",
   "version": "1.0.3",
   "keywords": [
-    "getkirby",
     "kirby",
     "kirby-cms",
+    "kirby-plugin",
     "plausible",
     "analytics"
   ],
