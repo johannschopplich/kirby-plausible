@@ -3,21 +3,28 @@
   "type": "module",
   "version": "1.0.3",
   "private": true,
-  "packageManager": "pnpm@10.12.4",
+  "packageManager": "pnpm@11.25.0",
   "scripts": {
-    "dev": "kirbyup serve src/panel/index.js",
-    "build": "kirbyup src/panel/index.js",
+    "dev": "kirbyup serve src/panel/index.ts",
+    "build": "kirbyup src/panel/index.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier \"src/panel/**\" --write",
+    "test:types": "tsc --noEmit",
     "release": "pnpm run build && bumpp --all --execute \"npx zx scripts/pre-release.mjs\""
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.16.2",
-    "bumpp": "^10.2.0",
-    "eslint": "^9.30.1",
-    "kirbyup": "^3.3.0",
-    "prettier": "^3.6.2",
-    "zx": "^8.6.1"
+    "@antfu/eslint-config": "^9.5.1",
+    "@types/node": "^26.6.5",
+    "bumpp": "^12.3.0",
+    "eslint": "^10.13.0",
+    "jiti": "^2.7.0",
+    "kirby-types": "^1.8.2",
+    "kirbyup": "^3.5.0",
+    "kirbyuse": "^1.4.2",
+    "prettier": "^3.9.10",
+    "typescript": "^6.0.3",
+    "vite": "~6.3.7",
+    "zx": "^8.8.5"
   }
 }

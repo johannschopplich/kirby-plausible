@@ -1,6 +1,6 @@
 {
   "name": "johannschopplich/kirby-plausible",
-  "description": "Plausible integration for Kirby CMS",
+  "description": "Plausible Analytics for Kirby CMS",
   "type": "kirby-plugin",
   "version": "1.0.3",
   "keywords": [
@@ -20,13 +20,15 @@
     }
   ],
   "require": {
-    "getkirby/composer-installer": "^1.2"
+    "php": ">=8.2",
+    "getkirby/composer-installer": "^1"
   },
   "require-dev": {
     "getkirby/cms": "^5"
   },
   "scripts": {
-    "dist": "composer install --no-dev --optimize-autoloader"
+    "csfix": "@php tools/phpcs/vendor/bin/php-cs-fixer fix",
+    "dist": "composer install --no-dev"
   },
   "config": {
     "optimize-autoloader": true,
@@ -35,6 +37,9 @@
     }
   },
   "extra": {
-    "kirby-cms-path": false
+    "kirby-cms-path": false,
+    "kirby": {
+      "compatible": "^4.0 || ^5.0"
+    }
   }
 }
