@@ -1,18 +1,18 @@
 <?php
 
+use Kirby\Cms\App;
+use Kirby\Toolkit\I18n;
+
 return [
-    'plausible' => fn (\Kirby\Cms\App $kirby) => [
-        'label' => 'Analytics',
+    'plausible' => fn (App $kirby) => [
+        'label' => I18n::translate('johannschopplich.plausible.label'),
         'icon' => 'chart',
-        'disabled' => false,
         'menu' => true,
-        'link' => 'plausible',
         'views' => [
             [
                 'pattern' => 'plausible',
-                'action'  => fn () => [
+                'action' => fn () => [
                     'component' => 'k-plausible-view',
-                    'title' => 'Analytics',
                     'props' => [
                         'sharedLink' => $kirby->option('johannschopplich.plausible.sharedLink', '')
                     ]

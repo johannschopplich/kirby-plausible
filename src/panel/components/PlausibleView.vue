@@ -18,7 +18,7 @@ export default {
 
 <template>
   <k-panel-inside>
-    <k-header>Plausible Analytics</k-header>
+    <k-header>{{ panel.t("johannschopplich.plausible.label") }}</k-header>
     <iframe
       v-if="sharedLink"
       :src="`${sharedLink}&embed=true&theme=${theme}&background=${theme === 'light' ? 'transparent' : '%231f1f1f'}`"
@@ -27,10 +27,12 @@ export default {
       frameborder="0"
       loading="lazy"
     />
-    <k-box v-else theme="empty">
-      Missing <code>johannschopplich.plausible.sharedLink</code> property in
-      your global Kirby configuration.
-    </k-box>
+    <k-box
+      v-else
+      theme="empty"
+      :text="panel.t('johannschopplich.plausible.sharedLinkMissing')"
+      html
+    />
   </k-panel-inside>
 </template>
 
