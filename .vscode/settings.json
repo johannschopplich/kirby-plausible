@@ -1,8 +1,5 @@
 {
-  // Enable ESLint flat config support
-  "eslint.experimental.useFlatConfig": true,
-
-  // Use Pretter as the default formatter
+  // Use Prettier as the default formatter
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
 
@@ -23,6 +20,29 @@
     "markdown",
     "json",
     "jsonc",
-    "yaml"
-  ]
+    "yaml",
+    "toml",
+    "xml",
+    "gql",
+    "graphql",
+    "astro",
+    "svelte",
+    "css",
+    "less",
+    "scss",
+    "pcss",
+    "postcss"
+  ],
+
+  // Exclude generated build assets from search and file explorer
+  "search.exclude": {
+    "/index.js": true,
+    "/assets/**": true,
+    "/vendor/**": true
+  },
+  "files.exclude": {
+    "/index.js": true,
+    "/assets/**": true,
+    "/vendor/**": true
+  }
 }
