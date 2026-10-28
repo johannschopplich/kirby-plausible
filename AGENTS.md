@@ -7,7 +7,7 @@ Kirby CMS plugin that embeds a Plausible shared-link dashboard in a Panel area a
 ```bash
 composer test          # PHPUnit
 composer csfix         # php-cs-fixer, lives in tools/phpcs/vendor/bin/, not vendor/bin/
-pnpm run test:types    # typecheck with tsc, which does not reach .vue files
+pnpm run test:types    # typecheck with vue-tsc
 pnpm run lint          # ESLint
 pnpm run build         # build the Panel bundle (index.js / index.css)
 ```

@@ -65,7 +65,7 @@ permissions:
 
 ## Requirements
 
-- Kirby 4 or Kirby 5
+- Kirby 6
 
 ## Installation
 
