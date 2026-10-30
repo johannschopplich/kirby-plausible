@@ -15,7 +15,7 @@ pnpm run build         # build the Panel bundle (index.js / index.css)
 ## Conventions
 
 - The plugin ships without `vendor/`, so it takes no runtime Composer dependency.
-- The dashboard is sized by Plausible's `embed.host.js` (iframe-resizer), loaded from the shared link's origin. It sizes `[plausible-embed]` iframes once on load; `PlausibleView.vue` hands it every iframe mounted later.
+- The dashboard is sized by Plausible's `embed.host.js` (iframe-resizer), loaded from the shared link's origin. It sizes `[plausible-embed]` iframes once on load; `DashboardView.vue` hands it every iframe mounted later.
 
 ## Search Hints
 
