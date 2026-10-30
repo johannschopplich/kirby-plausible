@@ -1,7 +1,7 @@
-import PlausibleView from "./components/PlausibleView.vue";
+import DashboardView from "./components/DashboardView.vue";
 
 window.panel.plugin("johannschopplich/plausible", {
   components: {
-    "k-plausible-view": PlausibleView,
+    "k-plausible-view": DashboardView,
   },
 });
