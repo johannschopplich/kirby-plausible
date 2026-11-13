@@ -13,22 +13,9 @@ use PHPUnit\Framework\TestCase;
 final class SnippetTest extends TestCase
 {
     #[Test]
-    public function prints_the_legacy_script_with_the_site_host_as_domain(): void
+    public function prints_nothing_without_scriptUrl(): void
     {
-        $html = $this->render([]);
-
-        $this->assertSame(
-            '<script data-domain="example.com" defer src="https://plausible.io/js/plausible.js"></script>',
-            $html
-        );
-    }
-
-    #[Test]
-    public function escapes_the_configured_domain(): void
-    {
-        $html = $this->render(['domain' => 'example.com"><script>alert(1)</script>']);
-
-        $this->assertStringContainsString('data-domain="example.com&quot;&gt;&lt;script&gt;', $html);
+        $this->assertSame('', $this->render([]));
     }
 
     #[Test]
@@ -38,13 +25,12 @@ final class SnippetTest extends TestCase
 
         $this->assertStringContainsString('<script async src="https://plausible.io/js/pa-abc123.js"></script>', $html);
         $this->assertStringContainsString('plausible.init()', $html);
-        $this->assertStringNotContainsString('data-domain', $html);
     }
 
     #[Test]
     public function prints_nothing_in_debug_mode(): void
     {
-        $this->assertSame('', $this->render([], debug: true));
+        $this->assertSame('', $this->render(['scriptUrl' => 'https://plausible.io/js/pa-abc123.js'], debug: true));
     }
 
     #[Test]
@@ -58,7 +44,6 @@ final class SnippetTest extends TestCase
     {
         $app = new App([
             'roots' => ['index' => '/dev/null'],
-            'urls' => ['index' => 'https://example.com'],
             'options' => [
                 'debug' => $debug,
                 'johannschopplich.plausible' => $options
