@@ -13,13 +13,14 @@ Kirby Plausible is a plugin for [Kirby CMS](https://getkirby.com) that shows you
 
 ## When to Use
 
-| I want to…                                | Use                           |
-| ----------------------------------------- | ----------------------------- |
-| See my site's stats in the Panel          | `sharedLink` option           |
-| Track the visitors of my site             | `snippet('plausible')`        |
-| Load Plausible's current tracking script  | `scriptUrl` option            |
-| Hide the dashboard from a role            | `access.plausible` permission |
-| Report a domain other than my site's host | `domain` option               |
+| I want to…                                      | Use                           |
+| ----------------------------------------------- | ----------------------------- |
+| See my site's stats in the Panel                | `sharedLink` option           |
+| Track the visitors of my site                   | `snippet('plausible')`        |
+| Load Plausible's current tracking script        | `scriptUrl` option            |
+| Send visits to a self-hosted Plausible instance | `scriptUrl` option            |
+| Hide the dashboard from a role                  | `access.plausible` permission |
+| Report a domain other than my site's host       | `domain` option               |
 
 ## Features
 
@@ -37,11 +38,11 @@ return [
 ```
 
 > [!NOTE]
-> Plausible can't embed a password-protected shared link. Leave its password empty and control who sees the dashboard through [Panel roles](#-role-access).
+> Plausible cannot embed a password-protected shared link. Leave its password empty and control who sees the dashboard through [Panel roles](#-role-access).
 
 ### 🏷️ Tracking Snippet
 
-Add the snippet to the `<head>` of your templates. It prints nothing in debug mode or for a logged-in Panel user, so your own visits stay out of the stats.
+Add the snippet to the `<head>` of your templates. It prints nothing in debug mode or for a logged-in user, so your own visits stay out of the stats.
 
 ```php
 <?php snippet('plausible') ?>
@@ -50,6 +51,8 @@ Add the snippet to the `<head>` of your templates. It prints nothing in debug mo
 By default, the snippet loads Plausible's legacy `plausible.js` from `plausible.io` and reports the host of your site URL as domain. Plausible gives every site its own script, listed in the site settings under **General → Site installation**. Set its URL as `scriptUrl`, and the snippet prints Plausible's current snippet instead.
 
 To pass options to `plausible.init()`, copy [`src/snippets/plausible.php`](src/snippets/plausible.php) to `site/snippets/plausible.php` and edit the copy: Kirby prefers a site snippet over the plugin's.
+
+On a self-hosted Plausible instance, set `scriptUrl` to the script URL from your instance: the default script reports every visit to Plausible Cloud, not to your instance.
 
 ### 🔐 Role Access
 
@@ -77,7 +80,7 @@ composer require johannschopplich/kirby-plausible
 
 ### Manual Installation
 
-Download and copy this repository to `/site/plugins/kirby-plausible`.
+Download a [release](https://github.com/johannschopplich/kirby-plausible/releases) and extract it to `/site/plugins/kirby-plausible`.
 
 ## Options
 
