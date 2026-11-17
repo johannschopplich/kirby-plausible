@@ -1,5 +1,6 @@
 <script lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref, usePanel } from "kirbyuse";
+import { usePanel } from "kirbyuse";
+import { computed, onBeforeUnmount, onMounted, ref } from "vue";
 
 declare global {
   interface Window {
@@ -50,12 +51,10 @@ const props = defineProps({
 const panel = usePanel();
 const iframe = ref<HTMLIFrameElement>();
 
-// Kirby 4 has no `panel.theme`.
-const theme = computed(() => panel.theme?.current ?? "light");
 const embedUrl = computed(() => {
   const url = new URL(props.sharedLink);
   url.searchParams.set("embed", "true");
-  url.searchParams.set("theme", theme.value);
+  url.searchParams.set("theme", panel.theme.current);
   url.searchParams.set("background", "transparent");
   return url.href;
 });
@@ -92,8 +91,7 @@ onBeforeUnmount(() => {
     <k-box
       v-else
       theme="empty"
-      :text="panel.t('johannschopplich.plausible.sharedLinkMissing')"
-      html
+      :text="panel.th('johannschopplich.plausible.sharedLinkMissing')"
     />
   </k-panel-inside>
 </template>

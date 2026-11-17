@@ -4,17 +4,9 @@ use Kirby\Cms\App;
 
 $kirby = App::instance();
 
-if ($kirby->option('debug') === true || $kirby->user() !== null) {
-    return;
-}
-
 $scriptUrl = $kirby->option('johannschopplich.plausible.scriptUrl');
 
-if (!$scriptUrl) {
-    echo js('https://plausible.io/js/plausible.js', [
-        'defer' => true,
-        'data-domain' => $kirby->option('johannschopplich.plausible.domain') ?? parse_url($kirby->url(), PHP_URL_HOST)
-    ]);
+if (!$scriptUrl || $kirby->option('debug') === true || $kirby->user() !== null) {
     return;
 }
 
